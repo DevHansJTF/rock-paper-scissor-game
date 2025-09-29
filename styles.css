@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Jersey 20", sans-serif;
+  background-image: url(./images/arena.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 105%;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+}
+
+h1 {
+  font-size: 100px;
+  -webkit-text-stroke: 1px white;
+}
+
+h2 {
+  color: white;
+  font-size: 30px;
+}
+
+.titles {
+  color: black;
+  font-weight: bolder;
+  border: white 5px dashed;
+  padding: 10px 50px;
+  margin-top: 10px;
+}
+
+.main-container {
+  height: 90vh;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 95px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.content-container {
+  display: flex;
+  text-align: center;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 40px;
+  font-family: "Press Start 2P", sans-serif;
+  width: 100%;
+}
+
+.player h3 {
+  -webkit-text-stroke: 1px white;
+}
+
+.player p {
+  -webkit-text-stroke: 0.5px white;
+}
+
+.cpu h3 {
+  -webkit-text-stroke: 1px white;
+}
+
+.cpu p {
+  -webkit-text-stroke: 0.5px white;
+}
+
+.side {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 150px;
+}
+
+.player h3 {
+  margin-bottom: 30px;
+}
+
+.cpu h3 {
+  margin-bottom: 30px;
+}
+
+.image-wrapper img {
+  width: auto;
+  height: 350px;
+}
+
+.image-wrapper.cpu-img img {
+  transform: scaleX(-1);
+}
+
+.image-wrapper-vs img {
+  height: 250px;
+  width: auto;
+}
+
+.choices-container {
+  display: flex;
+  gap: 250px;
+  align-items: center;
+}
+
+.choices-container img {
+  border: 10px solid white;
+  border-radius: 30px;
+  height: 180px;
+  width: 180px;
+}
+
+.settings {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 20px;
+  margin-right: 80px;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jersey+20&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="titles">
+        <h1>Rock Paper Scissors</h1>
+        <h2>Choose between rock, paper, and scissors and beat the cpu</h2>
+      </div>
+      <div class="content-container">
+        <div class="player-side side">
+          <div class="player">
+            <h3>You</h3>
+            <p>0</p>
+          </div>
+          <div class="image-wrapper player">
+            <img src="./images/paper.svg" alt="paper hand sign" />
+          </div>
+        </div>
+
+        <div class="image-wrapper-vs">
+          <img src="./images/vs.svg" alt="vs icon" />
+        </div>
+
+        <div class="cpu-side side">
+          <div class="image-wrapper cpu-img">
+            <img src="./images/rock.svg" alt="rock hand sign" />
+          </div>
+          <div class="cpu">
+            <h3>CPU</h3>
+            <p>0</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="choices-container">
+        <img src="./images/rock.svg" alt="rock hand sign" />
+        <img src="./images/paper.svg" alt="paper hand sign" />
+        <img src="./images/scissor.svg" alt="scissor hand sign" />
+      </div>
+    </div>
+
+    <div class="settings">
+      <img src="./images/music.svg" alt="music button" />
+      <img src="./images/restart.svg" alt="restart button" />
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
