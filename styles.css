@@ -19,7 +19,7 @@ h1 {
 }
 
 h2 {
-  color: white;
+  color: orange;
   font-size: 30px;
 }
 
@@ -56,7 +56,7 @@ h2 {
 }
 
 .player p {
-  -webkit-text-stroke: 0.5px white;
+  -webkit-text-stroke: 1px white;
 }
 
 .cpu h3 {
@@ -64,7 +64,8 @@ h2 {
 }
 
 .cpu p {
-  -webkit-text-stroke: 0.5px white;
+  color: red;
+  -webkit-text-stroke: 1px white;
 }
 
 .side {
@@ -79,6 +80,7 @@ h2 {
 }
 
 .cpu h3 {
+  color: red;
   margin-bottom: 30px;
 }
 
