@@ -84,13 +84,13 @@ h2 {
   margin-bottom: 30px;
 }
 
+.image-wrapper.cpu-img img {
+  transform: scaleX(-1);
+}
+
 .image-wrapper img {
   width: auto;
   height: 350px;
-}
-
-.image-wrapper.cpu-img img {
-  transform: scaleX(-1);
 }
 
 .image-wrapper-vs img {

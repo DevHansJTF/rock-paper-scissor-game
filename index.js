@@ -3,6 +3,9 @@ var playerNumber;
 var result;
 var playerScore = 0;
 var cpuScore = 0;
+var bgMusic = new Audio("./sounds/bgmusic.mp3");
+bgMusic.loop = true;
+var bgMusicStatus = false;
 
 for (var i = 0; i < 3; i++) {
   document.querySelectorAll(".choices-container img")[i].addEventListener("click", function () {
@@ -11,31 +14,20 @@ for (var i = 0; i < 3; i++) {
     cpuChoiceLogic();
     gameLogic();
     updateScore();
-    restartScore();
   });
 }
 
 function playerChoiceLogic(choice) {
   document.querySelector(".image-wrapper.player-img img").setAttribute("src", "./images/" + choice + ".svg");
 
-  if (choice == "rock") {
-    playerNumber = 0;
-  } else if (choice == "paper") {
-    playerNumber = 1;
-  } else {
-    playerNumber = 2;
-  }
+  var choices = { rock: 0, paper: 1, scissor: 2 };
+  playerNumber = choices[choice];
 }
 
 function cpuChoiceLogic() {
   cpuChoice = Math.floor(Math.random() * 3);
-  if (cpuChoice == 0) {
-    document.querySelector(".image-wrapper.cpu-img img").setAttribute("src", "./images/rock.svg");
-  } else if (cpuChoice == 1) {
-    document.querySelector(".image-wrapper.cpu-img img").setAttribute("src", "./images/paper.svg");
-  } else {
-    document.querySelector(".image-wrapper.cpu-img img").setAttribute("src", "./images/scissor.svg");
-  }
+  var imageList = ["rock", "paper", "scissor"];
+  document.querySelector(".image-wrapper.cpu-img img").setAttribute("src", "./images/" + imageList[cpuChoice] + ".svg");
 }
 
 function gameLogic() {
@@ -64,8 +56,28 @@ function updateScore() {
 
 function restartScore() {
   document.querySelector(".restart-btn").addEventListener("click", function () {
-    document.querySelector(".player-score").innerHTML = playerScore = 0;
-    document.querySelector(".cpu-score").innerHTML = cpuScore = 0;
+    playerScore = 0;
+    cpuScore = 0;
     document.querySelector("h1").innerHTML = "Rock Paper Scissors";
+    document.querySelector(".player-score").innerHTML = playerScore;
+    document.querySelector(".cpu-score").innerHTML = cpuScore;
   });
 }
+
+restartScore();
+
+function playBackgroundMusic() {
+  document.querySelector(".music-btn").addEventListener("click", function () {
+    if (bgMusicStatus == false) {
+      document.querySelector(".music-btn").setAttribute("src", "./images/music.svg");
+      bgMusic.play();
+      bgMusicStatus = true;
+    } else {
+      document.querySelector(".music-btn").setAttribute("src", "./images/mute.svg");
+      bgMusic.pause();
+      bgMusicStatus = false;
+    }
+  });
+}
+
+playBackgroundMusic();
