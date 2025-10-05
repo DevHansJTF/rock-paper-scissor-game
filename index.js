@@ -11,6 +11,7 @@ for (var i = 0; i < 3; i++) {
     cpuChoiceLogic();
     gameLogic();
     updateScore();
+    restartScore();
   });
 }
 
@@ -59,4 +60,12 @@ function updateScore() {
     document.querySelector(".player p").innerHTML = playerScore;
     document.querySelector(".cpu p").innerHTML = cpuScore;
   }
+}
+
+function restartScore() {
+  document.querySelector(".restart-btn").addEventListener("click", function () {
+    document.querySelector(".player-score").innerHTML = playerScore = 0;
+    document.querySelector(".cpu-score").innerHTML = cpuScore = 0;
+    document.querySelector("h1").innerHTML = "Rock Paper Scissors";
+  });
 }
