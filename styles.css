@@ -112,6 +112,10 @@ h2 {
   width: auto;
 }
 
+.cpu-img img {
+  transform: scaleX(-1);
+}
+
 /* CHOICES */
 .choices-container {
   display: flex;
