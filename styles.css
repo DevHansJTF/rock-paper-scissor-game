@@ -9,6 +9,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 /* BODY */
@@ -20,6 +21,9 @@ body {
   background-size: cover;
   background-color: rgba(0, 0, 0, 0.5);
   background-blend-mode: darken;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* TITLES */
@@ -43,13 +47,13 @@ h2 {
 
 /* MAIN CONTAINER */
 .main-container {
-  min-height: 90vh;
+  flex: 1;
   display: flex;
-  justify-content: space-evenly;
   flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
   text-align: center;
-  gap: 15vh;
+  gap: 10vh;
 }
 
 /* FLEX GROUPS */
